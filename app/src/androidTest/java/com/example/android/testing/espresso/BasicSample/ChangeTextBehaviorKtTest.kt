@@ -53,13 +53,14 @@ class ChangeTextBehaviorKtTest {
     fun changeText_newActivity() {
 
         val inputText = onView(withId(R.id.editTextUserInput))
-                .perform(ViewActions.typeText("The text is changed"))
+                .perform(ViewActions.typeText("She sells sea shells"))
         val perform = onView(withId(R.id.changeTextBt))
                 .perform(ViewActions.click())
         val checkText = onView(withId(R.id.textToBeChanged))
-                .check(ViewAssertions.matches(withText("The text is changed")))
+                .check(ViewAssertions.matches(withText("She sells sea shells")))
         val button = onView(withId(R.id.activityChangeTextBtn))
                 .perform(ViewActions.click())
+
 
     }
 
